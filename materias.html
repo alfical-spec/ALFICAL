@@ -9,9 +9,30 @@
         .container { max-width: 800px; margin: 40px auto; padding: 20px; background-color: white; border-radius: 8px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); }
         header { text-align: center; padding-bottom: 20px; }
         h1 { color: #007bff; }
-        nav { display: flex; justify-content: center; background-color: #555; margin-bottom: 20px; border-radius: 4px; }
-        nav a { color: white; padding: 14px 20px; text-decoration: none; text-align: center; }
-        nav a:hover { background-color: #777; }
+        nav { 
+    display: flex; 
+    justify-content: space-around; /* Distribuye el espacio entre los enlaces */
+    background-color: #555; 
+    margin-bottom: 20px; 
+    border-radius: 4px;
+    flex-wrap: wrap; /* Mantiene la capacidad de saltar de línea en caso de ser necesario */
+    padding: 0 5px; /* Reducimos el padding horizontal del contenedor */
+}
+
+nav a { 
+    color: white; 
+    padding: 14px 10px; /* REDUCIMOS el padding lateral de los enlaces (de 20px a 10px) */
+    text-decoration: none; 
+    text-align: center;
+    flex-grow: 1; /* Permite que el enlace crezca para ocupar espacio */
+    min-width: 23%; /* Asegura que cada enlace ocupe al menos un 23% para que quepan 4 */
+    box-sizing: border-box; 
+    white-space: nowrap; /* CRUCIAL: Impide que las palabras se rompan */
+}
+
+nav a:hover { 
+    background-color: #777; 
+}
         .whatsapp-button { display: block; width: 80%; margin: 20px auto; padding: 15px; background-color: #25d366; color: white; text-align: center; text-decoration: none; border-radius: 50px; font-size: 1.2em; font-weight: bold; }
         .whatsapp-button:hover { background-color: #128c7e; }
         .list-container { text-align: center; margin-top: 20px; }
