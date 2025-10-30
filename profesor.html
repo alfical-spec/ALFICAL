@@ -108,11 +108,12 @@
         /* Estilo para el nombre, asegurando que sea un párrafo con negrita y mismo tamaño */
         .text-item p.name {
             font-weight: bold;
-            font-size: 1em; /* Fuerzo el mismo tamaño que el texto normal */
+            /* Subo el tamaño para que sea visible, y dejo el resto del texto en 1em */
+            font-size: 1.2em; 
             margin-top: 0;
             margin-bottom: 10px;
         }
-
+        
         /* Responsive para Móviles: Se apila la imagen encima del texto */
         @media (max-width: 600px) {
             .content-flex {
@@ -161,8 +162,8 @@
 
             <div class="flex-item text-item">
                 <p class="name">Manuel Sevillano</p> 
-                <p>Profesor particular con **más de 44 años de experiencia** enseñando a estudiantes de colegio y universidad.</p>
-                <p>Mi método se basa en explicar con claridad y paciencia, adaptándome al proceso de aprendizaje de cada alumno, para asegurarme que comprenda adecuadamente los conceptos.</p>
+                <p style="font-size: 1em;">Profesor particular con **más de 44 años de experiencia** enseñando a estudiantes de colegio y universidad.</p>
+                <p style="font-size: 1em;">Mi método se basa en explicar con claridad y paciencia, adaptándome al proceso de aprendizaje de cada alumno, para asegurarme que comprenda adecuadamente los conceptos.</p>
             </div>
         </div>
         
