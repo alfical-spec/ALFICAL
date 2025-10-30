@@ -1,1 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ALFICAL - Clases de Matemáticas y Física</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f4f4; color: #333; }
+        .container { max-width: 800px; margin: 40px auto; padding: 20px; background-color: white; border-radius: 8px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); }
+        header { text-align: center; padding-bottom: 20px; }
+        /* CAMBIO SOLICITADO: Título H1 a Verde Oscuro */
+        h1 { color: #008000; } 
+        nav { 
+            display: flex; 
+            justify-content: space-around; 
+            /* COLOR VERDE OSCURO */
+            background-color: #008000; 
+            margin-bottom: 20px; 
+            border-radius: 4px;
+            flex-wrap: wrap; 
+            padding: 0 5px; 
+        }
 
+        nav a { 
+            color: white; 
+            padding: 14px 10px; 
+            text-decoration: none; 
+            text-align: center;
+            flex-grow: 1; 
+            min-width: 23%; 
+            box-sizing: border-box; 
+            white-space: nowrap; 
+        }
+
+        nav a:hover { 
+            /* COLOR VERDE CLARO PARA HOVER */
+            background-color: #00a000; 
+        }
+        
+        /* CAMBIO SOLICITADO: Botón de WhatsApp a Verde Oscuro */
+        .whatsapp-button { 
+            display: block; 
+            width: 80%; 
+            margin: 20px auto; 
+            padding: 15px; 
+            background-color: #008000; /* Verde Oscuro */
+            color: white; 
+            text-align: center; 
+            text-decoration: none; 
+            border-radius: 50px; 
+            font-size: 1.2em; 
+            font-weight: bold; 
+        }
+        .whatsapp-button:hover { 
+            background-color: #00a000; /* Verde Claro para Hover */
+        }
+        
+        /* CAMBIO SOLICITADO: Botón de Enlace a Verde Oscuro */
+        .main-link { 
+            display: block; 
+            width: 50%; 
+            margin: 30px auto; 
+            padding: 15px; 
+            background-color: #008000; /* Verde Oscuro */
+            color: white; 
+            text-align: center; 
+            text-decoration: none; 
+            border-radius: 5px; 
+            font-size: 1.1em; 
+        }
+        .main-link:hover { 
+            background-color: #00a000; 
+        }
+
+        /* Estilos específicos del contenido de inicio */
+        .content-block { text-align: justify; margin-bottom: 20px; }
+        .content-block img { width: 100%; height: auto; border-radius: 8px; margin-bottom: 15px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); }
+        
+        /* Responsive: Ajustes para móviles */
+        @media (max-width: 600px) {
+            .container { margin: 20px auto; padding: 10px; }
+            .main-link { width: 80%; }
+        }
+    </style>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-976611334"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-976611334');
+</script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Clases de Matemáticas y Física</h1>
+        </header>
+
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="materias.html">Materias</a>
+            <a href="profesor.html">Profesor</a>
+            <a href="tarifas.html">Tarifas</a>
+        </nav>
+
+        <a href="tel:3024361236" onclick="gtag('event', 'conversion', {'send_to': 'AW-976611334/MOnuCNyg1LUbEIbQ19ED'});" class="whatsapp-button">Contacteme para una clase: 3024361236</a>
+
+        <div class="content-block">
+            <img src="img/Operaciones con Fracciones (1).jpeg" alt="Imagen de Operaciones con Fracciones">
+            
+            <p>Aprenda de forma clara, práctica y a su propio nivel. Explicaciones paso a paso, para todos los niveles: básico, intermedio y universitario. Clases 100% personalizadas, adaptadas a su proceso de aprendizaje y sus metas académicas.</p>
+        </div>
+        
+        <a href="materias.html" class="main-link">Materias</a>
+    </div>
+</body>
+  </html>
