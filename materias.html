@@ -78,7 +78,7 @@
             padding: 0; 
             margin-top: 0; 
             font-size: 1.1em; 
-            text-align: left; 
+            text-align: left; /* Alineado a la izquierda en PC */
         }
 
         .text-item li { 
@@ -87,6 +87,7 @@
             padding: 10px; 
             border-radius: 5px; 
             text-align: center;
+            /* Eliminamos white-space: nowrap; para que el texto pueda saltar si es muy largo */
         }
 
         
@@ -101,23 +102,25 @@
                 max-width: 100%;
                 margin: 0 auto;
             }
+            
+            /* CENTRADO DEFINITIVO DEL BLOQUE DE MATERIAS */
             .text-item {
-                /* Quitamos text-align: center del padre para evitar problemas */
+                max-width: 80%; /* Damos un ancho manejable al contenedor de texto */
+                margin: 0 auto; /* Centramos el contenedor de texto en la pantalla */
+                width: 100%; /* Aseguramos que ocupe el espacio */
+                padding-top: 0; /* Eliminamos padding superior si lo tuviera */
             }
             
-            /* NUEVOS AJUSTES PARA CENTRAR EL LISTADO */
+            /* AJUSTES DE LA LISTA INTERNA */
             .text-item ul {
-                display: block; /* Asegura el comportamiento de bloque */
-                max-width: 80%; /* Limitamos el ancho del UL para que no sea 100% */
-                margin: 0 auto; /* ¡Centrado del UL! */
-                padding-left: 0; 
-                text-align: center; /* Centra el texto dentro del UL */
+                width: 100%; /* Ocupa el 100% del contenedor centrado */
+                margin: 0; /* Quitamos márgenes residuales */
+                padding-left: 0;
             }
              .text-item li {
-                width: auto; /* IMPORTANTE: Quitamos el ancho fijo */
-                max-width: 100%; /* Aseguramos que no se desborde */
-                margin-left: 0; /* Reiniciamos los márgenes */
-                margin-right: 0;
+                width: auto; /* Permite que el ancho se ajuste al contenido (Matemáticas) */
+                max-width: 100%; /* Previene desbordamiento */
+                white-space: normal; /* Asegura que el texto pueda envolverse si es necesario */
             }
         }
     </style>
@@ -164,4 +167,4 @@
         <a href="profesor.html" class="main-link">Profesor</a>
     </div>
 </body>
-</html>
+                        </html>
