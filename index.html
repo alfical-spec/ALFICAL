@@ -6,32 +6,34 @@
     <title>ALFICAL - Clases particulares</title>
     <style>
         body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f4f4; color: #333; }
-        .container { max-width: 800px; margin: 40px auto; padding: 20px; background-color: white; border-radius: 8px; box-shadow: 0 0 10px rgba(0 0 0 / 10%); }
+        .container { max-width: 800px; margin: 40px auto; padding: 20px; background-color: white; border-radius: 8px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); }
         header { text-align: center; padding-bottom: 20px; }
         h1 { color: #007bff; }
         nav { 
             display: flex; 
-            justify-content: space-around; /* Distribuye el espacio entre los enlaces */
-            background-color: #555; 
+            justify-content: space-around; 
+            /* COLOR VERDE OSCURO */
+            background-color: #008000; 
             margin-bottom: 20px; 
             border-radius: 4px;
-            flex-wrap: wrap; /* Mantiene la capacidad de saltar de línea en caso de ser necesario */
-            padding: 0 5px; /* Reducimos el padding horizontal del contenedor */
+            flex-wrap: wrap; 
+            padding: 0 5px; 
         }
 
         nav a { 
             color: white; 
-            padding: 14px 10px; /* REDUCIMOS el padding lateral de los enlaces (de 20px a 10px) */
+            padding: 14px 10px; 
             text-decoration: none; 
             text-align: center;
-            flex-grow: 1; /* Permite que el enlace crezca para ocupar espacio */
-            min-width: 23%; /* Asegura que cada enlace ocupe al menos un 23% para que quepan 4 */
+            flex-grow: 1; 
+            min-width: 23%; 
             box-sizing: border-box; 
-            white-space: nowrap; /* CRUCIAL: Impide que las palabras se rompan */
+            white-space: nowrap; 
         }
 
         nav a:hover { 
-            background-color: #777; 
+            /* COLOR VERDE CLARO PARA HOVER */
+            background-color: #00a000; 
         }
         
         .whatsapp-button { display: block; width: 80%; margin: 20px auto; padding: 15px; background-color: #25d366; color: white; text-align: center; text-decoration: none; border-radius: 50px; font-size: 1.2em; font-weight: bold; }
@@ -39,7 +41,7 @@
         .main-link { display: block; width: 50%; margin: 30px auto; padding: 15px; background-color: #007bff; color: white; text-align: center; text-decoration: none; border-radius: 5px; font-size: 1.1em; }
         .main-link:hover { background-color: #0056b3; }
 
-        /* --- CSS para MAQUETACIÓN LADO A LADO (NUEVO) --- */
+        /* --- CSS para MAQUETACIÓN LADO A LADO --- */
         .content-flex {
             display: flex; 
             align-items: flex-start; /* Alinea los elementos a la parte superior */
@@ -61,7 +63,7 @@
             width: 100%;
             height: auto;
             border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0 0 0 / 10%); 
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
         }
 
         .text-item {
@@ -69,8 +71,8 @@
             text-align: justify;
         }
         
-        .text-item h2 {
-             margin-top: 0; /* Alinea el título superior con la imagen */
+        .text-item h2, .text-item h3 {
+             margin-top: 0; /* Asegura que el título comience alineado con la imagen */
              text-align: left;
         }
         
