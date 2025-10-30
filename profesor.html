@@ -38,6 +38,48 @@ nav a:hover {
         .profile-text { margin-top: 30px; line-height: 1.6; text-align: justify; }
         .main-link { display: block; width: 50%; margin: 30px auto; padding: 15px; background-color: #007bff; color: white; text-align: center; text-decoration: none; border-radius: 5px; font-size: 1.1em; }
         .main-link:hover { background-color: #0056b3; }
+    /* --- CSS para MAQUETACIÓN LADO A LADO (profesor.html) --- */
+.content-flex {
+    display: flex; 
+    align-items: flex-start;
+    gap: 20px; 
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.flex-item {
+    padding: 10px;
+}
+
+.image-item {
+    flex: 0 0 40%;
+    max-width: 250px;
+}
+
+.image-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sutil sombra para destacar */
+}
+
+.text-item {
+    flex: 1;
+    text-align: justify;
+}
+
+/* --- Responsive para Móviles --- */
+@media (max-width: 600px) {
+    .content-flex {
+        flex-direction: column;
+    }
+    .image-item {
+        order: -1; 
+        width: 80%;
+        max-width: 100%;
+        margin: 0 auto;
+    }
+}
     </style>
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-976611334"></script>
 <script>
