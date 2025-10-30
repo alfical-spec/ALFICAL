@@ -8,7 +8,8 @@
         body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f4f4; color: #333; }
         .container { max-width: 800px; margin: 40px auto; padding: 20px; background-color: white; border-radius: 8px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); }
         header { text-align: center; padding-bottom: 20px; }
-        h1 { color: #007bff; }
+        /* CAMBIO SOLICITADO: Título H1 a Verde Oscuro */
+        h1 { color: #008000; } 
         nav { 
             display: flex; 
             justify-content: space-around; 
@@ -39,16 +40,17 @@
         .whatsapp-button { display: block; width: 80%; margin: 20px auto; padding: 15px; background-color: #25d366; color: white; text-align: center; text-decoration: none; border-radius: 50px; font-size: 1.2em; font-weight: bold; }
         .whatsapp-button:hover { background-color: #128c7e; }
         
-        .main-link { display: block; width: 50%; margin: 30px auto; padding: 15px; background-color: #007bff; color: white; text-align: center; text-decoration: none; border-radius: 5px; font-size: 1.1em; }
-        .main-link:hover { background-color: #0056b3; }
+        /* CAMBIO SOLICITADO: Botón a Verde Oscuro */
+        .main-link { display: block; width: 50%; margin: 30px auto; padding: 15px; background-color: #008000; color: white; text-align: center; text-decoration: none; border-radius: 5px; font-size: 1.1em; }
+        .main-link:hover { background-color: #00a000; }
 
         /* --- CSS para MAQUETACIÓN LADO A LADO --- */
         .content-flex {
             display: flex; 
-            align-items: flex-start; /* Alinea los elementos a la parte superior */
+            align-items: flex-start; 
             gap: 20px; 
             margin-top: 30px;
-            flex-wrap: wrap; /* Esencial para el responsive */
+            flex-wrap: wrap; 
         }
 
         .flex-item {
@@ -57,28 +59,27 @@
 
         .image-item {
             flex: 0 0 40%;
-            max-width: 250px; /* Tamaño máximo para la imagen en el escritorio */
+            max-width: 250px; 
         }
 
         .image-item img {
             width: 100%;
             height: auto;
             border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
         }
 
         .text-item {
-            flex: 1; /* El texto/lista ocupa el espacio restante */
+            flex: 1; 
             text-align: left;
         }
         
-        /* Asegura la ALINEACIÓN SUPERIOR Y ELIMINA MARGEN PREDETERMINADO DEL UL */
         .text-item ul { 
             list-style: none; 
             padding: 0; 
             margin-top: 0; 
             font-size: 1.1em; 
-            text-align: left; /* Alineado a la izquierda en PC */
+            text-align: left; 
         }
 
         .text-item li { 
@@ -87,14 +88,13 @@
             padding: 10px; 
             border-radius: 5px; 
             text-align: center;
-            /* Eliminamos white-space: nowrap; para que el texto pueda saltar si es muy largo */
         }
 
         
-        /* --- Responsive para Móviles: Se apila la imagen encima del texto --- */
+        /* --- Responsive para Móviles --- */
         @media (max-width: 600px) {
             .content-flex {
-                flex-direction: column; /* Apila verticalmente */
+                flex-direction: column; 
             }
             .image-item {
                 order: -1; 
@@ -103,24 +103,22 @@
                 margin: 0 auto;
             }
             
-            /* CENTRADO DEFINITIVO DEL BLOQUE DE MATERIAS */
             .text-item {
-                max-width: 80%; /* Damos un ancho manejable al contenedor de texto */
-                margin: 0 auto; /* Centramos el contenedor de texto en la pantalla */
-                width: 100%; /* Aseguramos que ocupe el espacio */
-                padding-top: 0; /* Eliminamos padding superior si lo tuviera */
+                max-width: 80%; 
+                margin: 0 auto; 
+                width: 100%; 
+                padding-top: 0; 
             }
             
-            /* AJUSTES DE LA LISTA INTERNA */
             .text-item ul {
-                width: 100%; /* Ocupa el 100% del contenedor centrado */
-                margin: 0; /* Quitamos márgenes residuales */
+                width: 100%; 
+                margin: 0; 
                 padding-left: 0;
             }
              .text-item li {
-                width: auto; /* Permite que el ancho se ajuste al contenido (Matemáticas) */
-                max-width: 100%; /* Previene desbordamiento */
-                white-space: normal; /* Asegura que el texto pueda envolverse si es necesario */
+                width: auto; 
+                max-width: 100%; 
+                white-space: normal; 
             }
         }
     </style>
@@ -167,4 +165,4 @@
         <a href="profesor.html" class="main-link">Profesor</a>
     </div>
 </body>
-                        </html>
+</html>
