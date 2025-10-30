@@ -72,12 +72,9 @@
             text-align: left;
         }
         
-        .text-item h2 {
-             margin-top: 0; /* Asegura que el título comience alineado con la imagen */
-             text-align: left;
-        }
-        /* Estilos específicos para la lista */
+        /* Ajuste: Eliminar margen superior para alinear con la imagen si no hay h2 */
         .text-item ul { 
+            margin-top: 0; /* Asegura que la lista se alinee con la imagen si no hay h2 */
             list-style: none; 
             padding: 0; 
             font-size: 1.1em; 
@@ -103,52 +100,8 @@
                 margin: 0 auto;
             }
             .text-item {
-                text-align: center; /* Centra el texto en móvil */
+                text-align: center; /* Centra el contenido del flex-item en móvil */
             }
-        }
-    </style>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-976611334"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'AW-976611334');
-</script>
-</head>
-<body>
-    <div class="container">
-        <header>
-            <h1>Materias</h1>
-        </header>
-
-        <nav>
-            <a href="index.html">Inicio</a>
-            <a href="materias.html">Materias</a>
-            <a href="profesor.html">Profesor</a>
-            <a href="tarifas.html">Tarifas</a>
-        </nav>
-
-        <a href="tel:3024361236" onclick="gtag('event', 'conversion', {'send_to': 'AW-976611334/MOnuCNyg1LUbEIbQ19ED'});" class="whatsapp-button">Reservar mi clase ahora: 3024361236</a>
-
-        <div class="content-flex">
-            <div class="flex-item image-item">
-                <img src="img/Partes de la Integral.jpeg" alt="Diagrama de las partes de una integral, simbolizando los temas de cálculo." style="width: 100%; height: auto; border-radius: 8px;">
-            </div>
-
-            <div class="flex-item text-item">
-                <h2 style="margin-top: 0;"></h2> 
-                <ul>
-                    <li>Matemáticas</li>
-                    <li>Aritmética</li>
-                    <li>Álgebra</li>
-                    <li>Geometría</li>
-                    <li>Cálculo</li>
-                    <li>Física</li>
-                </ul>
-            </div>
-        </div>
-        <a href="profesor.html" class="main-link">Profesor</a>
-    </div>
-</body>
-</html>
+            .text-item ul {
+                padding: 0; /* Asegura que no haya padding lateral para centrar */
+                display: inline-block; /*
