@@ -84,7 +84,9 @@
         .flex-item {
             padding: 10px;
         }
-
+        
+        /* El TEXTO ahora va a la izquierda y la IMAGEN a la derecha en PC por el orden del HTML */
+        
         .image-item {
             flex: 0 0 40%;
             max-width: 250px; /* Tamaño máximo para la imagen en el escritorio */
@@ -103,7 +105,7 @@
             text-align: justify; /* Mantiene el texto justificado */
         }
         
-        /* Responsive: Ajustes para móviles (apila la imagen arriba del texto) */
+        /* Responsive: Ajustes para móviles (apila el texto arriba de la imagen) */
         @media (max-width: 600px) {
             .container { margin: 20px auto; padding: 10px; }
             .main-link { width: 80%; }
@@ -111,7 +113,8 @@
                 flex-direction: column; /* Apila verticalmente */
             }
             .image-item {
-                order: -1; /* Mueve la imagen arriba en móvil */
+                /* Elimino order: -1. Al revertir el orden de los divs en el HTML, 
+                   el texto estará primero y la imagen después en móvil, cumpliendo el requisito. */
                 width: 80%;
                 max-width: 100%;
                 margin: 0 auto;
@@ -146,12 +149,12 @@
         <a href="tel:3024361236" onclick="gtag('event', 'conversion', {'send_to': 'AW-976611334/MOnuCNyg1LUbEIbQ19ED'});" class="whatsapp-button">Contacteme para una clase: 3024361236</a>
 
         <div class="content-flex">
-            <div class="flex-item image-item">
-                <img src="img/Operaciones con Fracciones (1).jpeg" alt="Imagen de Operaciones con Fracciones">
-            </div>
-            
             <div class="flex-item text-item">
                 <p>Aprenda de forma clara, práctica y a su propio nivel. Explicaciones paso a paso, para todos los niveles: básico, intermedio y universitario. Clases 100% personalizadas, adaptadas a su proceso de aprendizaje y sus metas académicas.</p>
+            </div>
+            
+            <div class="flex-item image-item">
+                <img src="img/Operaciones con Fracciones (1).jpeg" alt="Imagen de Operaciones con Fracciones">
             </div>
         </div>
         <a href="materias.html" class="main-link">Materias</a>
