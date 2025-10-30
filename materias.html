@@ -78,7 +78,7 @@
             padding: 0; 
             margin-top: 0; 
             font-size: 1.1em; 
-            text-align: left; /* Por defecto, alineado a la izquierda en PC */
+            text-align: left; 
         }
 
         .text-item li { 
@@ -96,18 +96,24 @@
                 flex-direction: column; /* Apila verticalmente */
             }
             .image-item {
-                order: -1; /* Mueve la imagen arriba del texto */
+                order: -1; 
                 width: 80%;
                 max-width: 100%;
                 margin: 0 auto;
             }
             .text-item {
-                text-align: center; /* Centra el listado en móvil */
+                text-align: center; /* Centra el contenido inline (si lo hubiera) */
             }
-            /* ESTE ES EL AJUSTE PARA CENTRAR LA LISTA EN MÓVIL */
+            
+            /* NUEVOS AJUSTES PARA CENTRAR EL LISTADO */
             .text-item ul {
-                text-align: center; /* Centra los items si no tienen ancho total */
-                width: 100%; /* El UL debe ocupar todo el ancho del contenedor */
+                text-align: center; /* Centra el texto dentro del UL */
+                padding-left: 0; /* MUY IMPORTANTE: Elimina el padding predeterminado de la lista */
+            }
+             .text-item li {
+                width: 70%; /* Le damos un ancho específico a los ítems */
+                margin-left: auto; /* Centramos el ítem usando auto margins */
+                margin-right: auto;
             }
         }
     </style>
@@ -141,7 +147,6 @@
             </div>
 
             <div class="flex-item text-item">
-                
                 <ul>
                     <li>Matemáticas</li>
                     <li>Aritmética</li>
