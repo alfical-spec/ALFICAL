@@ -101,10 +101,18 @@
         .text-item {
             flex: 1; 
             text-align: justify; 
-            font-size: 1em; 
+            font-size: 1em; /* Tamaño de fuente estándar para el texto */
             line-height: 1.6; 
         }
         
+        /* Ajuste para el nombre para que sea visible y use el mismo tamaño */
+        .text-item strong {
+            display: block;
+            font-size: 1.2em; /* Hace el nombre ligeramente más grande para destacarlo */
+            margin-bottom: 5px;
+            margin-top: 0;
+        }
+
         /* Responsive para Móviles: Se apila la imagen encima del texto */
         @media (max-width: 600px) {
             .content-flex {
@@ -152,7 +160,7 @@
             </div>
 
             <div class="flex-item text-item">
-                <p style="font-weight: bold; font-size: 1.2em; margin-top: 0;">Manuel Sevillano</p> 
+                <strong>Manuel Sevillano</strong> 
                 <p>Profesor particular con **más de 44 años de experiencia** enseñando a estudiantes de colegio y universidad.</p>
                 <p>Mi método se basa en explicar con claridad y paciencia, adaptándome al proceso de aprendizaje de cada alumno, para asegurarme que comprenda adecuadamente los conceptos.</p>
             </div>
@@ -161,4 +169,4 @@
         <a href="tarifas.html" class="main-link">Tarifas</a>
     </div>
 </body>
-    </html>
+</html>
