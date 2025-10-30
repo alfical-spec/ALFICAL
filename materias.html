@@ -102,18 +102,22 @@
                 margin: 0 auto;
             }
             .text-item {
-                text-align: center; /* Centra el contenido inline (si lo hubiera) */
+                /* Quitamos text-align: center del padre para evitar problemas */
             }
             
             /* NUEVOS AJUSTES PARA CENTRAR EL LISTADO */
             .text-item ul {
+                display: block; /* Asegura el comportamiento de bloque */
+                max-width: 80%; /* Limitamos el ancho del UL para que no sea 100% */
+                margin: 0 auto; /* ¡Centrado del UL! */
+                padding-left: 0; 
                 text-align: center; /* Centra el texto dentro del UL */
-                padding-left: 0; /* MUY IMPORTANTE: Elimina el padding predeterminado de la lista */
             }
              .text-item li {
-                width: 70%; /* Le damos un ancho específico a los ítems */
-                margin-left: auto; /* Centramos el ítem usando auto margins */
-                margin-right: auto;
+                width: auto; /* IMPORTANTE: Quitamos el ancho fijo */
+                max-width: 100%; /* Aseguramos que no se desborde */
+                margin-left: 0; /* Reiniciamos los márgenes */
+                margin-right: 0;
             }
         }
     </style>
