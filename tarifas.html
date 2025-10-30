@@ -3,12 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ALFICAL - Tarifas</title>
+    <title>ALFICAL - Materias</title>
     <style>
         body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f4f4; color: #333; }
         .container { max-width: 800px; margin: 40px auto; padding: 20px; background-color: white; border-radius: 8px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); }
         header { text-align: center; padding-bottom: 20px; }
-        h1 { color: #007bff; }
+        /* CAMBIO DE AZUL A VERDE OSCURO */
+        h1 { color: #008000; } 
         nav { 
             display: flex; 
             justify-content: space-around; 
@@ -39,8 +40,9 @@
         .whatsapp-button { display: block; width: 80%; margin: 20px auto; padding: 15px; background-color: #25d366; color: white; text-align: center; text-decoration: none; border-radius: 50px; font-size: 1.2em; font-weight: bold; }
         .whatsapp-button:hover { background-color: #128c7e; }
         
-        .main-link { display: block; width: 50%; margin: 30px auto; padding: 15px; background-color: #007bff; color: white; text-align: center; text-decoration: none; border-radius: 5px; font-size: 1.1em; }
-        .main-link:hover { background-color: #0056b3; }
+        /* CAMBIO DE AZUL A VERDE OSCURO */
+        .main-link { display: block; width: 50%; margin: 30px auto; padding: 15px; background-color: #008000; color: white; text-align: center; text-decoration: none; border-radius: 5px; font-size: 1.1em; }
+        .main-link:hover { background-color: #00a000; }
 
         /* --- CSS para MAQUETACIÓN LADO A LADO --- */
         .content-flex {
@@ -58,42 +60,38 @@
         .image-item {
             flex: 0 0 40%;
             max-width: 250px; /* Tamaño máximo para la imagen en el escritorio */
-            border-radius: 8px;
         }
 
         .image-item img {
             width: 100%;
             height: auto;
             border-radius: 8px;
-            display: block; 
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
         }
 
         .text-item {
-            flex: 1; 
-            text-align: left; 
+            flex: 1; /* El texto/lista ocupa el espacio restante */
+            text-align: left;
         }
         
-        /* Estilos específicos para el listado simple de tarifas */
-        .tariffs-list {
-            list-style: none; /* Eliminar viñetas */
-            padding: 0;
-            margin: 0;
-        }
-        .tariffs-list li {
-            margin-bottom: 5px;
-            font-size: 1.1em;
-            line-height: 1.4;
-        }
-        .tariffs-list strong {
-            display: block; 
-            font-size: 1.2em;
-            margin-top: 15px;
-            margin-bottom: 5px;
-            color: #007bff;
+        /* Asegura la ALINEACIÓN SUPERIOR Y ELIMINA MARGEN PREDETERMINADO DEL UL */
+        .text-item ul { 
+            list-style: none; 
+            padding: 0; 
+            margin-top: 0; 
+            font-size: 1.1em; 
+            text-align: left; 
         }
 
+        .text-item li { 
+            background-color: #e9e9e9; 
+            margin: 10px 0; 
+            padding: 10px; 
+            border-radius: 5px; 
+            text-align: center;
+        }
 
+        
         /* --- Responsive para Móviles: Se apila la imagen encima del texto --- */
         @media (max-width: 600px) {
             .content-flex {
@@ -105,63 +103,7 @@
                 max-width: 100%;
                 margin: 0 auto;
             }
-            /* Centramos el contenedor de texto y aseguramos la alineación a la izquierda */
+            
+            /* CENTRADO DEFINITIVO DEL BLOQUE DE MATERIAS */
             .text-item {
-                max-width: 90%;
-                margin: 0 auto;
-                width: 100%; 
-                text-align: left;
-            }
-        }
-    </style>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-976611334"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'AW-976611334');
-</script>
-</head>
-<body>
-    <div class="container">
-        <header>
-            <h1>Tarifas</h1>
-        </header>
-
-        <nav>
-            <a href="index.html">Inicio</a>
-            <a href="materias.html">Materias</a>
-            <a href="profesor.html">Profesor</a>
-            <a href="tarifas.html">Tarifas</a>
-        </nav>
-
-        <a href="tel:3024361236" onclick="gtag('event', 'conversion', {'send_to': 'AW-976611334/MOnuCNyg1LUbEIbQ19ED'});" class="whatsapp-button">¡Solicite su clase!</a>
-
-        <div class="content-flex">
-            <div class="flex-item image-item">
-                <img src="img/Binomio al cubo.png" alt="Fórmula del binomio al cubo, representando los temas de álgebra." style="width: 100%; height: auto; border-radius: 8px;">
-            </div>
-
-            <div class="flex-item text-item">
-                <ul class="tariffs-list">
-                    <strong>Clases a Domicilio</strong>
-                    <li>1 hora diaria: $25,000</li>
-                    <li>2 horas diarias: $44,000</li>
-                    <li>3 horas diarias: $63,000</li>
-                </ul>
-
-                <ul class="tariffs-list">
-                    <strong>Clases Virtuales</strong>
-                    <li>1 hora diaria: $22,000</li>
-                    <li>2 horas diarias: $40,000</li>
-                    <li>3 horas diarias: $57,000</li>
-                </ul>
-                
-                <p style="font-size: 0.9em; margin-top: 15px;">*Las tarifas presenciales aplican para la ciudad de **Bogotá**.</p>
-            </div>
-        </div>
-        <a href="index.html" class="main-link">Inicio</a>
-    </div>
-</body>
-</html>
+                max-width: 80%; /* D
