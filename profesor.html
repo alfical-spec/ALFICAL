@@ -105,13 +105,12 @@
             line-height: 1.6; 
         }
         
-        /* Estilo para el nombre, asegurando que sea un párrafo con negrita y mismo tamaño */
+        /* Estilo para el nombre, que debe ser un poco más grande */
         .text-item p.name {
             font-weight: bold;
-            /* Subo el tamaño para que sea visible, y dejo el resto del texto en 1em */
             font-size: 1.2em; 
             margin-top: 0;
-            margin-bottom: 10px;
+            margin-bottom: 15px; /* Aumento el margen inferior para separarlo del texto de la descripción */
         }
         
         /* Responsive para Móviles: Se apila la imagen encima del texto */
@@ -162,9 +161,13 @@
 
             <div class="flex-item text-item">
                 <p class="name">Manuel Sevillano</p> 
-                <p style="font-size: 1em;">Profesor particular con **más de 44 años de experiencia** enseñando a estudiantes de colegio y universidad.</p>
-                <p style="font-size: 1em;">Mi método se basa en explicar con claridad y paciencia, adaptándome al proceso de aprendizaje de cada alumno, para asegurarme que comprenda adecuadamente los conceptos.</p>
-            </div>
+                
+                <p>
+                    Profesor particular con **más de 44 años de experiencia** enseñando a estudiantes de colegio y universidad.
+                    <br><br>
+                    Mi método se basa en explicar con claridad y paciencia, adaptándome al proceso de aprendizaje de cada alumno, para asegurarme que comprenda adecuadamente los conceptos.
+                </p>
+                </div>
         </div>
         
         <a href="tarifas.html" class="main-link">Tarifas</a>
