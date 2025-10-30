@@ -58,24 +58,22 @@
         .image-item {
             flex: 0 0 40%;
             max-width: 250px; /* Tamaño máximo para la imagen en el escritorio */
+            /* Agregamos un borde simple para asegurar que el espacio se vea */
+            border: 1px solid #ccc; 
+            border-radius: 8px;
         }
 
         .image-item img {
             width: 100%;
             height: auto;
             border-radius: 8px;
+            display: block; /* Soluciona problemas de espacio en blanco */
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
         }
 
         .text-item {
-            flex: 1; /* El texto/contenido de tarifas ocupa el espacio restante */
-            /* IMPORTANTE: Centrar el texto/bloque a la izquierda, no el contenido del bloque */
+            flex: 1; 
             text-align: left; 
-        }
-        
-        .text-item h2 {
-             margin-top: 0;
-             text-align: left;
         }
         
         /* Estilos específicos para el listado simple de tarifas */
@@ -87,9 +85,10 @@
         .tariffs-list li {
             margin-bottom: 5px;
             font-size: 1.1em;
+            line-height: 1.4;
         }
         .tariffs-list strong {
-            display: block; /* Asegura que el título de la categoría se separe */
+            display: block; 
             font-size: 1.2em;
             margin-top: 15px;
             margin-bottom: 5px;
@@ -108,10 +107,11 @@
                 max-width: 100%;
                 margin: 0 auto;
             }
-            /* Centramos el texto a la izquierda en móvil dentro de un contenedor centrado */
+            /* Centramos el contenedor de texto y aseguramos la alineación a la izquierda */
             .text-item {
                 max-width: 90%;
                 margin: 0 auto;
+                width: 100%; /* Asegura que ocupe todo el espacio para el centrado */
                 text-align: left;
             }
         }
