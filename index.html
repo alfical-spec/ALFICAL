@@ -3,12 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ALFICAL - Clases particulares</title>
+    <title>ALFICAL - Clases de Matemáticas y Física</title>
     <style>
         body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f4f4; color: #333; }
         .container { max-width: 800px; margin: 40px auto; padding: 20px; background-color: white; border-radius: 8px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); }
         header { text-align: center; padding-bottom: 20px; }
-        h1 { color: #007bff; }
+        /* CAMBIO DE AZUL A VERDE OSCURO */
+        h1 { color: #008000; } 
         nav { 
             display: flex; 
             justify-content: space-around; 
@@ -38,55 +39,19 @@
         
         .whatsapp-button { display: block; width: 80%; margin: 20px auto; padding: 15px; background-color: #25d366; color: white; text-align: center; text-decoration: none; border-radius: 50px; font-size: 1.2em; font-weight: bold; }
         .whatsapp-button:hover { background-color: #128c7e; }
-        .main-link { display: block; width: 50%; margin: 30px auto; padding: 15px; background-color: #007bff; color: white; text-align: center; text-decoration: none; border-radius: 5px; font-size: 1.1em; }
-        .main-link:hover { background-color: #0056b3; }
-
-        /* --- CSS para MAQUETACIÓN LADO A LADO --- */
-        .content-flex {
-            display: flex; 
-            align-items: flex-start; /* Alinea los elementos a la parte superior */
-            gap: 20px; 
-            margin-top: 30px;
-            flex-wrap: wrap; /* Esencial para el responsive */
-        }
-
-        .flex-item {
-            padding: 10px;
-        }
-
-        .image-item {
-            flex: 0 0 40%;
-            max-width: 250px; /* Tamaño máximo para la imagen en el escritorio */
-        }
-
-        .image-item img {
-            width: 100%;
-            height: auto;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
-        }
-
-        .text-item {
-            flex: 1; /* El texto ocupa el espacio restante */
-            text-align: justify;
-        }
         
-        .text-item h2, .text-item h3 {
-             margin-top: 0; /* Asegura que el título comience alineado con la imagen */
-             text-align: left;
-        }
+        /* CAMBIO DE AZUL A VERDE OSCURO */
+        .main-link { display: block; width: 50%; margin: 30px auto; padding: 15px; background-color: #008000; color: white; text-align: center; text-decoration: none; border-radius: 5px; font-size: 1.1em; }
+        .main-link:hover { background-color: #00a000; }
+
+        /* Estilos específicos del contenido de inicio */
+        .content-block { text-align: justify; margin-bottom: 20px; }
+        .content-block img { width: 100%; height: auto; border-radius: 8px; margin-bottom: 15px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); }
         
-        /* --- Responsive para Móviles: Se apila la imagen encima del texto --- */
+        /* Responsive: Ajustes para móviles */
         @media (max-width: 600px) {
-            .content-flex {
-                flex-direction: column; /* Apila verticalmente */
-            }
-            .image-item {
-                order: -1; /* Mueve la imagen arriba del texto */
-                width: 80%;
-                max-width: 100%;
-                margin: 0 auto;
-            }
+            .container { margin: 20px auto; padding: 10px; }
+            .main-link { width: 80%; }
         }
     </style>
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-976611334"></script>
@@ -101,7 +66,7 @@
 <body>
     <div class="container">
         <header>
-            <h1>ALFICAL</h1>
+            <h1>ALFICAL - Clases de Matemáticas y Física</h1>
         </header>
 
         <nav>
@@ -110,23 +75,15 @@
             <a href="profesor.html">Profesor</a>
             <a href="tarifas.html">Tarifas</a>
         </nav>
-        
-        <div class="content-flex">
-            <div class="flex-item image-item">
-                <img src="img/Integral de Área.jpeg" alt="Fórmula de una integral de área, representando el nivel de experticia." style="width: 100%; height: auto; border-radius: 8px;">
-            </div>
 
-            <div class="flex-item text-item">
-                <h2 style="margin-top: 0;">Clases particulares a Domicilio y Virtuales</h2>
-                
-                <h3>Clases de Matemáticas y Física</h3>
-                <p>Aprenda de forma clara, práctica y a su propio nivel.</p>
-                <p>Explicaciones paso a paso, para todos los niveles: básico, intermedio y universitario.</p>
-                <p>Clases 100% personalizadas, adaptadas a su proceso de aprendizaje y sus metas académicas.</p>
-            </div>
+        <a href="tel:3024361236" onclick="gtag('event', 'conversion', {'send_to': 'AW-976611334/MOnuCNyg1LUbEIbQ19ED'});" class="whatsapp-button">Reservar mi clase ahora: 3024361236</a>
+
+        <div class="content-block">
+            <img src="img/Logo de Alfical.png" alt="Logo de Alfical - Matemáticas y Física">
+            <p>¡Bienvenido a ALFICAL! Soy Alberto, el profesor detrás de este proyecto, y estoy aquí para ayudarte a dominar las Matemáticas y la Física, desde el nivel escolar hasta la universidad.</p>
+            <p>Con **más de 10 años de experiencia**, he desarrollado un método de enseñanza simple, práctico y efectivo que te permitirá comprender los conceptos más complejos de manera sencilla. Olvídate de memorizar y empieza a entender. Ofrezco clases **a domicilio en Bogotá** y **virtuales** para cualquier lugar.</p>
+            <p>Mi objetivo es que alcances tus metas académicas, apruebes tus exámenes y, lo más importante, que desarrolles una base sólida de conocimiento en ciencias exactas.</p>
         </div>
-        <a href="tel:3024361236" onclick="gtag('event', 'conversion', {'send_to': 'AW-976611334/MOnuCNyg1LUbEIbQ19ED'});" class="whatsapp-button">Solicité información por WhatsApp: 3024361236</a>
-        
         <a href="materias.html" class="main-link">Materias</a>
     </div>
 </body>
