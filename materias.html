@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -180,5 +179,36 @@
         </div>
         <a href="profesor.html" class="main-link">Profesor</a>
     </div>
+
+<script>
+    // Encuentra el botón por su clase
+    const whatsappButton = document.querySelector('.whatsapp-button');
+
+    if (whatsappButton) {
+        // Define el número con código de país (57 para Colombia) y el mensaje
+        const phoneNumber = '573024361236';
+        // Mensaje específico para materias.html
+        const message = 'Hola, quisiera reservar una clase de las materias que ofrecen en la página.';
+        const whatsappLink = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+
+        // Mantiene el enlace de teléfono por defecto, pero lo cambia al hacer clic
+        whatsappButton.addEventListener('click', function(event) {
+            // Evita que se dispare el enlace telefónico por defecto inmediatamente
+            event.preventDefault(); 
+            
+            // Reemplaza el enlace a WhatsApp y luego navega
+            this.href = whatsappLink;
+            window.location.href = this.href;
+            
+            // Mantiene el seguimiento de Google Ads (La función gtag ya está definida arriba)
+            gtag('event', 'conversion', {'send_to': 'AW-976611334/MOnuCNyg1LUbEIbQ19ED'});
+        });
+        
+        // Opcional: Para dispositivos de escritorio, reemplaza el href inmediatamente (abre web.whatsapp.com)
+        if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+            whatsappButton.href = whatsappLink;
+        }
+    }
+</script>
 </body>
-    </html>
+                </html>
