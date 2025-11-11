@@ -178,22 +178,22 @@ Clases 100% personalizadas, adaptadas a su proceso de aprendizaje y sus metas ac
         const whatsappLink = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
 
         whatsappButton.addEventListener('click', function(event) {
-            // Previene la acción por defecto y el onclick directo
+            // Evita que se ejecute la acción por defecto (href="tel:...") y el onclick del HTML.
             event.preventDefault(); 
             
-            // EJECUTA EL SEGUIMIENTO DE GOOGLE ADS.
-            gtag('event', 'conversion', {'send_to': 'AW-976611334/MOnuCNyg1LUbEIbQ19ED'});
+            // 1. EJECUTA EL SEGUIMIENTO DE GOOGLE ADS (DEBE IR PRIMERO)
+            gtag('event', 'conversion', {'send_to': 'AW-976611334/MOnuCNyg1LUbEIbQ19ED'});
         
-            // Retrasamos la redirección 300ms para darle tiempo a gtag a enviar el dato.
+            // 2. Retrasamos la redirección 300ms para darle tiempo a gtag a enviar el dato.
             setTimeout(function() {
                 window.location.href = whatsappLink;
             }, 300);
         });
         
-        // Esta sección asegura que en escritorio el enlace sea wa.me sin depender del eventListener para todos los casos.
-        if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-            whatsappButton.href = whatsappLink;
-        }
+        // La lógica anterior que causó problemas. La eliminamos para evitar conflictos de diseño.
+        // if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+        //     whatsappButton.href = whatsappLink;
+        // }
     }
 </script>
 </body>
