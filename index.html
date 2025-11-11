@@ -151,7 +151,7 @@
             <a href="tarifas.html">Tarifas</a>
         </nav>
 
-                <a href="tel:3024361236" onclick="gtag('event', 'conversion', {'send_to': 'AW-976611334/MOnuCNyg1LUbEIbQ19ED'});" class="whatsapp-button">Contacteme para una clase: 3024361236</a>
+        <a href="tel:3024361236" onclick="gtag('event', 'conversion', {'send_to': 'AW-976611334/MOnuCNyg1LUbEIbQ19ED'});" class="whatsapp-button">Contacteme para una clase: 3024361236</a>
 
         <div class="content-flex">
             <div class="flex-item text-item">
@@ -178,23 +178,19 @@ Clases 100% personalizadas, adaptadas a su proceso de aprendizaje y sus metas ac
         const whatsappLink = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
 
         whatsappButton.addEventListener('click', function(event) {
-            // Previene la acción por defecto (tel: o la redirección inmediata)
+            // Previene la acción por defecto y el onclick directo
             event.preventDefault(); 
             
-            // EJECUTA EL SEGUIMIENTO DE GOOGLE ADS (usa el onclick del HTML)
-            // Le damos 300ms de gracia.
-
-            // Disparamos el seguimiento antes de la redirección
+            // EJECUTA EL SEGUIMIENTO DE GOOGLE ADS.
             gtag('event', 'conversion', {'send_to': 'AW-976611334/MOnuCNyg1LUbEIbQ19ED'});
         
-            // Retrasamos la redirección para darle tiempo a gtag a enviar el dato.
+            // Retrasamos la redirección 300ms para darle tiempo a gtag a enviar el dato.
             setTimeout(function() {
                 window.location.href = whatsappLink;
             }, 300);
         });
         
-        // Esta parte se ejecuta para asegurar el enlace wa.me cuando no hay un clic directo
-        // y evitar el href="tel:..." en escritorios.
+        // Esta sección asegura que en escritorio el enlace sea wa.me sin depender del eventListener para todos los casos.
         if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
             whatsappButton.href = whatsappLink;
         }
