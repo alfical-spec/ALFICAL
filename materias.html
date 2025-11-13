@@ -12,7 +12,7 @@
         /* Título H1 a Verde Oscuro y Mayúsculas */
         h1 { 
             color: #008000; 
-            text-transform: uppercase; /* Agregado para consistencia con index.html */
+            text-transform: uppercase; 
             margin-bottom: 5px; 
         } 
         
@@ -151,6 +151,27 @@
                 white-space: normal; 
             }
         }
+        
+        /* ✅ CSS AÑADIDO: Pie de Página (Footer) */
+        footer {
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px; 
+            background-color: #333; /* Fondo gris oscuro/negro */
+            color: white;
+            border-radius: 0 0 8px 8px; /* Solo las esquinas inferiores */
+            font-size: 0.9em;
+        }
+        
+        footer a {
+            color: #00a000; /* Color verde claro para enlaces en el footer */
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
     </style>
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-976611334"></script>
 <script>
@@ -210,6 +231,15 @@
         </div>
         <a href="profesor.html" class="main-link">Conozca al Profesor</a>
     </div>
+
+    <footer>
+        <p>&copy; 2025 ALFICAL. Clases Particulares de Matemáticas y Física.</p>
+        <p>
+            <a href="tel:3024361236">Teléfono: 3024361236</a> | 
+            <a href="https://wa.me/573024361236?text=Hola,%20quisiera%20pedir%20información%20sobre%20clases%20particulares." 
+               target="_blank" rel="noopener noreferrer">WhatsApp</a>
+        </p>
+    </footer>
 
 </body>
 </html>
