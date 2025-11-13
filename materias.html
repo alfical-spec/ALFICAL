@@ -8,12 +8,17 @@
         body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f4f4; color: #333; }
         .container { max-width: 1200px; margin: 40px auto; padding: 20px; background-color: white; border-radius: 8px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); }
         header { text-align: center; padding-bottom: 20px; }
-        /* CAMBIO SOLICITADO: Título H1 a Verde Oscuro */
-        h1 { color: #008000; } 
+        
+        /* Título H1 a Verde Oscuro y Mayúsculas */
+        h1 { 
+            color: #008000; 
+            text-transform: uppercase; /* Agregado para consistencia con index.html */
+            margin-bottom: 5px; 
+        } 
+        
         nav { 
             display: flex; 
             justify-content: space-around; 
-            /* COLOR VERDE OSCURO */
             background-color: #008000; 
             margin-bottom: 20px; 
             border-radius: 4px;
@@ -33,17 +38,16 @@
         }
 
         nav a:hover { 
-            /* COLOR VERDE CLARO PARA HOVER */
             background-color: #00a000; 
         }
         
-        /* CAMBIO APLICADO: Botón de WhatsApp a Verde Oscuro */
+        /* Botón de WhatsApp a Verde Oscuro */
         .whatsapp-button { 
             display: block; 
             width: 80%; 
             margin: 20px auto; 
             padding: 15px; 
-            background-color: #008000; /* Verde Oscuro */
+            background-color: #008000; 
             color: white; 
             text-align: center; 
             text-decoration: none; 
@@ -52,12 +56,25 @@
             font-weight: bold; 
         }
         .whatsapp-button:hover { 
-            background-color: #00a000; /* Ajustado el hover a verde más claro */
+            background-color: #00a000; 
         }
         
-        /* CAMBIO SOLICITADO: Botón a Verde Oscuro */
-        .main-link { display: block; width: 50%; margin: 30px auto; padding: 15px; background-color: #008000; color: white; text-align: center; text-decoration: none; border-radius: 5px; font-size: 1.1em; }
-        .main-link:hover { background-color: #00a000; }
+        /* Botón de Enlace a Verde Oscuro */
+        .main-link { 
+            display: block; 
+            width: 50%; 
+            margin: 30px auto; 
+            padding: 15px; 
+            background-color: #008000; 
+            color: white; 
+            text-align: center; 
+            text-decoration: none; 
+            border-radius: 5px; 
+            font-size: 1.1em; 
+        }
+        .main-link:hover { 
+            background-color: #00a000; 
+        }
 
         /* --- CSS para MAQUETACIÓN LADO A LADO --- */
         .content-flex {
@@ -70,11 +87,13 @@
 
         .flex-item {
             padding: 10px;
+            box-sizing: border-box; 
         }
 
         .image-item {
             flex: 0 0 40%;
             max-width: 250px; 
+            margin: 0 auto;
         }
 
         .image-item img {
@@ -82,57 +101,53 @@
             height: auto;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+            display: block;
         }
 
         .text-item {
             flex: 1; 
             text-align: left;
+            min-width: 280px; /* Asegura espacio mínimo para el texto */
         }
         
         .text-item ul { 
             list-style: none; 
             padding: 0; 
-            margin-top: 0; 
+            margin-top: 10px; 
             font-size: 1.1em; 
-            text-align: left; 
         }
 
         .text-item li { 
-            background-color: #e9e9e9; 
+            /* Estilo mejorado para la lista */
+            background-color: #e6ffe6; /* Fondo verde muy claro */
             margin: 10px 0; 
-            padding: 10px; 
+            padding: 12px; 
+            border-left: 4px solid #008000; /* Línea verde oscura */
             border-radius: 5px; 
-            text-align: center;
+            font-weight: bold;
         }
 
         
         /* --- Responsive para Móviles --- */
         @media (max-width: 600px) {
+             .container { margin: 20px auto; padding: 10px; }
+             .main-link { width: 80%; }
             .content-flex {
                 flex-direction: column; 
             }
             .image-item {
-                order: -1; 
+                order: -1; /* Mueve la imagen arriba en móviles */
                 width: 80%;
                 max-width: 100%;
                 margin: 0 auto;
             }
-            
             .text-item {
-                max-width: 80%; 
-                margin: 0 auto; 
-                width: 100%; 
-                padding-top: 0; 
-            }
-            
-            .text-item ul {
-                width: 100%; 
-                margin: 0; 
-                padding-left: 0;
-            }
-             .text-item li {
-                width: auto; 
                 max-width: 100%; 
+                margin: 0; 
+                width: 100%; 
+                padding: 10px 0; 
+            }
+            .text-item li {
                 white-space: normal; 
             }
         }
@@ -149,7 +164,10 @@
 <body>
     <div class="container">
         <header>
-            <h1>Materias</h1>
+            <h1>ALFICAL</h1>
+            <p style="color: #008000; text-align: center; margin-top: 0;">
+                Clases Particulares a Domicilio
+            </p>
         </header>
 
         <nav>
@@ -159,56 +177,39 @@
             <a href="tarifas.html">Tarifas</a>
         </nav>
 
-        <a href="tel:3024361236" onclick="gtag('event', 'conversion', {'send_to': 'AW-976611334/MOnuCNyg1LUbEIbQ19ED'});" class="whatsapp-button">Reservar mi clase ahora: 3024361236</a>
+        <a href="https://wa.me/573024361236?text=Hola,%20quisiera%20reservar%20una%20clase%20de%20Matemáticas%20o%20Física." 
+           onclick="gtag('event', 'conversion', {'send_to': 'AW-976611334/MOnuCNyg1LUbEIbQ19ED'});" 
+           class="whatsapp-button"
+           target="_blank" rel="noopener noreferrer">
+           Reservar mi clase ahora: 3024361236
+        </a>
+
+        <h2 style="text-align: center; color: #008000; margin-bottom: 25px;">Nuestras Especialidades de Clase</h2>
 
         <div class="content-flex">
-            <div class="flex-item image-item">
-                <img src="img/Partes de la Integral.jpeg" alt="Diagrama de las partes de una integral, simbolizando los temas de cálculo." style="width: 100%; height: auto; border-radius: 8px;">
-            </div>
-
+            
             <div class="flex-item text-item">
+                <h3 style="color: #333;">Matemáticas</h3>
                 <ul>
-                    <li>Matemáticas</li>
-                    <li>Aritmética</li>
-                    <li>Álgebra</li>
-                    <li>Geometría</li>
-                    <li>Cálculo</li>
-                    <li>Física</li>
+                    <li>Aritmética y Álgebra (Escolar y Pre-universitaria)</li>
+                    <li>Geometría y Trigonometría</li>
+                    <li>Cálculo Diferencial e Integral (Universitario)</li>
+                    <li>Álgebra Lineal y Ecuaciones Diferenciales</li>
+                </ul>
+                <h3 style="color: #333; margin-top: 20px;">Física</h3>
+                <ul>
+                    <li>Física General (Mecánica, Termodinámica)</li>
+                    <li>Electricidad y Magnetismo</li>
+                    <li>Óptica y Ondas</li>
                 </ul>
             </div>
+            
+            <div class="flex-item image-item">
+                <img src="img/Partes de la Integral.jpeg" alt="Diagrama de las partes de una integral, simbolizando los temas de cálculo.">
+            </div>
         </div>
-        <a href="profesor.html" class="main-link">Profesor</a>
+        <a href="profesor.html" class="main-link">Conozca al Profesor</a>
     </div>
 
-<script>
-    // Encuentra el botón por su clase
-    const whatsappButton = document.querySelector('.whatsapp-button');
-
-    if (whatsappButton) {
-        // Define el número con código de país (57 para Colombia) y el mensaje
-        const phoneNumber = '573024361236';
-        // Mensaje específico para materias.html
-        const message = 'Hola, quisiera reservar una clase.';
-        const whatsappLink = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
-
-        // Mantiene el enlace de teléfono por defecto, pero lo cambia al hacer clic
-        whatsappButton.addEventListener('click', function(event) {
-            // Evita que se dispare el enlace telefónico por defecto inmediatamente
-            event.preventDefault(); 
-            
-            // Reemplaza el enlace a WhatsApp y luego navega
-            this.href = whatsappLink;
-            window.location.href = this.href;
-            
-            // Mantiene el seguimiento de Google Ads (La función gtag ya está definida arriba)
-            gtag('event', 'conversion', {'send_to': 'AW-976611334/MOnuCNyg1LUbEIbQ19ED'});
-        });
-        
-        // Opcional: Para dispositivos de escritorio, reemplaza el href inmediatamente (abre web.whatsapp.com)
-        if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-            whatsappButton.href = whatsappLink;
-        }
-    }
-</script>
 </body>
-                </html>
+</html>
