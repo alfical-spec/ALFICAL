@@ -90,6 +90,7 @@
         }
 
         .image-item {
+            /* En escritorio, la imagen debe ir a la derecha (40%) */
             flex: 0 0 40%;
             max-width: 250px; 
             border-radius: 8px;
@@ -104,6 +105,7 @@
         }
 
         .text-item {
+            /* En escritorio, el texto debe ir a la izquierda (flex: 1) */
             flex: 1; 
             text-align: left; 
         }
@@ -142,13 +144,16 @@
             .content-flex {
                 flex-direction: column; 
             }
+            /* ✅ CAMBIO AQUÍ: Eliminamos 'order: -1;' para que la imagen vaya DESPUÉS del texto */
             .image-item {
-                order: -1; 
+                /* order: -1; */ /* REGLA ELIMINADA */
                 width: 80%;
                 max-width: 100%;
                 margin: 0 auto;
             }
             .text-item {
+                /* ✅ CAMBIO AQUÍ: Añadimos 'order: -1;' para que el texto vaya PRIMERO en móviles */
+                order: -1; 
                 max-width: 100%;
                 margin: 0;
                 width: 100%; 
@@ -156,19 +161,19 @@
             }
         }
         
-        /* ✅ CSS AÑADIDO: Pie de Página (Footer) */
+        /* Pie de Página (Footer) */
         footer {
             text-align: center;
             padding: 20px;
             margin-top: 40px; 
-            background-color: #333; /* Fondo gris oscuro/negro */
+            background-color: #333; 
             color: white;
-            border-radius: 0 0 8px 8px; /* Solo las esquinas inferiores */
+            border-radius: 0 0 8px 8px; 
             font-size: 0.9em;
         }
         
         footer a {
-            color: #00a000; /* Color verde claro para enlaces en el footer */
+            color: #00a000; 
             text-decoration: none;
             margin: 0 10px;
         }
