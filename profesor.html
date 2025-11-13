@@ -120,26 +120,29 @@
             color: #008000; /* Color verde para el nombre, destacándolo */
         }
         
-        /* Responsive para Móviles: Se apila la imagen encima del texto */
+        /* Responsive para Móviles */
         @media (max-width: 600px) {
             .container { margin: 20px auto; padding: 10px; }
             .main-link { width: 80%; }
             .content-flex {
                 flex-direction: column; 
             }
+            /* ✅ CAMBIO: Quitamos order: -1; para que la imagen se quede debajo (orden 2) */
             .image-item {
-                order: -1; 
+                /* order: -1; */ 
                 width: 80%; 
                 max-width: 100%; 
                 margin: 0 auto; 
                 padding-bottom: 10px;
             }
+            /* ✅ CAMBIO: Añadimos order: -1; para que el TEXTO vaya PRIMERO (orden 1) */
             .text-item {
+                order: -1;
                 text-align: justify; 
             }
         }
         
-        /* ✅ CSS AÑADIDO: Pie de Página (Footer) */
+        /* Pie de Página (Footer) */
         footer {
             text-align: center;
             padding: 20px;
