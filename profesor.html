@@ -8,8 +8,14 @@
         body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f4f4; color: #333; }
         .container { max-width: 1200px; margin: 40px auto; padding: 20px; background-color: white; border-radius: 8px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); }
         header { text-align: center; padding: 10px 0; }
-        /* Título H1 a Verde Oscuro */
-        h1 { color: #008000; margin-bottom: 10px; } 
+        
+        /* Título H1 a Verde Oscuro y Mayúsculas (Ajustado para consistencia) */
+        h1 { 
+            color: #008000; 
+            text-transform: uppercase; 
+            margin-bottom: 5px; 
+        } 
+        
         nav { 
             display: flex; 
             justify-content: space-around; 
@@ -101,20 +107,23 @@
         .text-item {
             flex: 1; 
             text-align: justify; 
-            font-size: 1em; /* TAMAÑO DE TEXTO BASE */
+            font-size: 1em; 
             line-height: 1.6; 
         }
         
-        /* Estilo para el nombre, que debe ser un poco más grande */
+        /* Estilo para el nombre */
         .text-item p.name {
             font-weight: bold;
             font-size: 1.2em; 
             margin-top: 0;
-            margin-bottom: 15px; /* Aumento el margen inferior para separarlo del texto de la descripción */
+            margin-bottom: 15px; 
+            color: #008000; /* Color verde para el nombre, destacándolo */
         }
         
         /* Responsive para Móviles: Se apila la imagen encima del texto */
         @media (max-width: 600px) {
+            .container { margin: 20px auto; padding: 10px; }
+            .main-link { width: 80%; }
             .content-flex {
                 flex-direction: column; 
             }
@@ -142,7 +151,10 @@
 <body>
     <div class="container">
         <header>
-            <h1>Profesor</h1>
+            <h1>ALFICAL</h1>
+            <p style="color: #008000; text-align: center; margin-top: 0;">
+                Clases Particulares a Domicilio
+            </p>
         </header>
 
         <nav>
@@ -152,56 +164,38 @@
             <a href="tarifas.html">Tarifas</a>
         </nav>
 
-        <a href="tel:3024361236" onclick="gtag('event', 'conversion', {'send_to': 'AW-976611334/MOnuCNyg1LUbEIbQ19ED'});" class="whatsapp-button">Contacte al profesor: 3024361236</a>
+        <a href="https://wa.me/573024361236?text=Hola,%20quisiera%20contactar%20al%20profesor%20Manuel%20para%20una%20clase." 
+           onclick="gtag('event', 'conversion', {'send_to': 'AW-976611334/MOnuCNyg1LUbEIbQ19ED'});" 
+           class="whatsapp-button"
+           target="_blank" rel="noopener noreferrer">
+           Contacte al profesor: 3024361236
+        </a>
+
+        <h2 style="text-align: center; color: #008000; margin-bottom: 25px;">Conozca al Profesor</h2>
 
         <div class="content-flex">
+            
             <div class="flex-item image-item">
-                <img src="img/Integral de Área.jpeg" alt="Imagen de Integral de Área">
+                <img src="img/Integral de Área.jpeg" alt="Imagen representativa de la enseñanza de cálculo">
             </div>
 
             <div class="flex-item text-item">
                 <p class="name">Manuel Sevillano</p> 
                 
                 <p>
-                    Profesor particular con **más de 44 años de experiencia** enseñando a estudiantes de colegio y universidad.
-                    <br><br>
-                    Mi método se basa en explicar con claridad y paciencia, adaptándome al proceso de aprendizaje de cada alumno, para asegurarme que comprenda adecuadamente los conceptos.
+                    El profesor Manuel Sevillano es un profesional con **más de 44 años de experiencia** dedicado a la enseñanza de Matemáticas y Física a estudiantes de colegio y universidad.
                 </p>
-                </div>
+                <p>
+                    Su método pedagógico se basa en la **explicación clara y la paciencia**, adaptándose rigurosamente al proceso de aprendizaje de cada estudiante para asegurar una comprensión profunda de los conceptos, no solo la memorización.
+                </p>
+                <p>
+                    La filosofía de enseñanza es simple: **hacer que lo complejo sea accesible**. Su amplia trayectoria es la garantía de que encontrará la mejor manera de ayudarle a usted o a su hijo a alcanzar sus metas académicas.
+                </p>
+            </div>
         </div>
         
-        <a href="tarifas.html" class="main-link">Tarifas</a>
+        <a href="tarifas.html" class="main-link">Ver Tarifas y Paquetes</a>
     </div>
     
-<script>
-    // Encuentra el botón por su clase
-    const whatsappButton = document.querySelector('.whatsapp-button');
-
-    if (whatsappButton) {
-        // Define el número con código de país (57 para Colombia) y el mensaje
-        const phoneNumber = '573024361236';
-        // Mensaje específico para el profesor.html
-        const message = 'Hola, quisiera pedir información sobre clases particulares.';
-        const whatsappLink = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
-
-        // Mantiene el enlace de teléfono por defecto, pero lo cambia al hacer clic
-        whatsappButton.addEventListener('click', function(event) {
-            // Evita que se dispare el enlace telefónico por defecto inmediatamente
-            event.preventDefault(); 
-            
-            // Reemplaza el enlace a WhatsApp y luego navega
-            this.href = whatsappLink;
-            window.location.href = this.href;
-            
-            // Mantiene el seguimiento de Google Ads (La función gtag ya está definida arriba)
-            gtag('event', 'conversion', {'send_to': 'AW-976611334/MOnuCNyg1LUbEIbQ19ED'});
-        });
-        
-        // Opcional: Para dispositivos de escritorio, reemplaza el href inmediatamente para que la URL sea correcta (abre web.whatsapp.com)
-        if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-            whatsappButton.href = whatsappLink;
-        }
-    }
-</script>
 </body>
-    </html>
+</html>
