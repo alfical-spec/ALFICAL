@@ -4,204 +4,100 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ALFICAL - Clases de Matemáticas y Física</title>
+
+    <!-- ===================== ESTILOS ===================== -->
     <style>
         body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f4f4; color: #333; }
         .container { max-width: 1200px; margin: 40px auto; padding: 20px; background-color: white; border-radius: 8px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); }
         header { text-align: center; padding-bottom: 20px; }
-        
-        /* Título H1 a Verde Oscuro y Mayúsculas */
-        h1 { 
-            color: #008000; 
-            text-transform: uppercase; 
-            margin-bottom: 5px; /* Reduzco el margen inferior para acercar el subtítulo */
-        } 
-        
-        nav { 
-            display: flex; 
-            justify-content: space-around; 
-            /* COLOR VERDE OSCURO */
-            background-color: #008000; 
-            margin-bottom: 20px; 
-            border-radius: 4px;
-            flex-wrap: wrap; 
-            padding: 0 5px; 
-        }
-
-        nav a { 
-            color: white; 
-            padding: 14px 10px; 
-            text-decoration: none; 
-            text-align: center;
-            flex-grow: 1; 
-            min-width: 23%; 
-            box-sizing: border-box; 
-            white-space: nowrap; 
-        }
-
-        nav a:hover { 
-            /* COLOR VERDE CLARO PARA HOVER */
-            background-color: #00a000; 
-        }
-        
-        /* Botón de WhatsApp a Verde Oscuro */
-        .whatsapp-button { 
-            display: block; 
-            width: 80%; 
-            margin: 20px auto; 
-            padding: 15px; 
-            background-color: #008000; /* Verde Oscuro */
-            color: white; 
-            text-align: center; 
-            text-decoration: none; 
-            border-radius: 50px; 
-            font-size: 1.2em; 
-            font-weight: bold; 
-        }
-        .whatsapp-button:hover { 
-            background-color: #00a000; /* Verde Claro para Hover */
-        }
-        
-        /* Botón de Enlace a Verde Oscuro */
-        .main-link { 
-            display: block; 
-            width: 50%; 
-            margin: 30px auto; 
-            padding: 15px; 
-            background-color: #008000; /* Verde Oscuro */
-            color: white; 
-            text-align: center; 
-            text-decoration: none; 
-            border-radius: 5px; 
-            font-size: 1.1em; 
-        }
-        .main-link:hover { 
-            background-color: #00a000; 
-        }
-
-        /* --- CSS para MAQUETACIÓN LADO A LADO (Inicio) --- */
-        .content-flex {
-            display: flex; 
-            align-items: flex-start; 
-            gap: 20px; 
-            margin-top: 30px;
-            flex-wrap: wrap; 
-        }
-
-        .flex-item {
-            padding: 10px;
-        }
-        
-        .image-item {
-            flex: 0 0 40%;
-            max-width: 250px; 
-        }
-
-        .image-item img {
-            width: 100%;
-            height: auto;
-            border-radius: 8px;
-            display: block; 
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
-        }
-
-        .text-item {
-            flex: 1; 
-            text-align: justify; 
-        }
-        
-        /* Responsive: Ajustes para móviles (apila el texto arriba de la imagen) */
+        h1 { color: #008000; text-transform: uppercase; margin-bottom: 5px; } 
+        nav { display: flex; justify-content: space-around; background-color: #008000; margin-bottom: 20px; border-radius: 4px; flex-wrap: wrap; padding: 0 5px; }
+        nav a { color: white; padding: 14px 10px; text-decoration: none; text-align: center; flex-grow: 1; min-width: 23%; box-sizing: border-box; white-space: nowrap; }
+        nav a:hover { background-color: #00a000; }
+        .whatsapp-button { display: block; width: 80%; margin: 20px auto; padding: 15px; background-color: #008000; color: white; text-align: center; text-decoration: none; border-radius: 50px; font-size: 1.2em; font-weight: bold; }
+        .whatsapp-button:hover { background-color: #00a000; }
+        .main-link { display: block; width: 50%; margin: 30px auto; padding: 15px; background-color: #008000; color: white; text-align: center; text-decoration: none; border-radius: 5px; font-size: 1.1em; }
+        .main-link:hover { background-color: #00a000; }
+        .content-flex { display: flex; align-items: flex-start; gap: 20px; margin-top: 30px; flex-wrap: wrap; }
+        .flex-item { padding: 10px; }
+        .image-item { flex: 0 0 40%; max-width: 250px; }
+        .image-item img { width: 100%; height: auto; border-radius: 8px; display: block; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); }
+        .text-item { flex: 1; text-align: justify; }
         @media (max-width: 600px) {
             .container { margin: 20px auto; padding: 10px; }
             .main-link { width: 80%; }
-            .content-flex {
-                flex-direction: column; 
-            }
-            .image-item {
-                width: 80%;
-                max-width: 100%;
-                margin: 0 auto;
-            }
-            .text-item {
-                text-align: justify; 
-            }
+            .content-flex { flex-direction: column; }
+            .image-item { width: 80%; max-width: 100%; margin: 0 auto; }
+            .text-item { text-align: justify; }
         }
-        
-        /* ✅ CSS AÑADIDO: Pie de Página (Footer) */
-        footer {
-            text-align: center;
-            padding: 20px;
-            margin-top: 40px; 
-            background-color: #333; /* Fondo gris oscuro/negro */
-            color: white;
-            border-radius: 0 0 8px 8px; /* Solo las esquinas inferiores */
-            font-size: 0.9em;
-        }
-        
-        footer a {
-            color: #00a000; /* Color verde claro para enlaces en el footer */
-            text-decoration: none;
-            margin: 0 10px;
-        }
-
-        footer a:hover {
-            text-decoration: underline;
-        }
+        footer { text-align: center; padding: 20px; margin-top: 40px; background-color: #333; color: white; border-radius: 0 0 8px 8px; font-size: 0.9em; }
+        footer a { color: #00a000; text-decoration: none; margin: 0 10px; }
+        footer a:hover { text-decoration: underline; }
     </style>
+
+    <!-- ===================== GOOGLE ANALYTICS 4 ===================== -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-C5BY691ZQG"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-C5BY691ZQG');
+    </script>
+
+    <!-- ===================== GOOGLE ADS ===================== -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-976611334"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'AW-976611334');
-</script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'AW-976611334');
+    </script>
 </head>
+
 <body>
-    <div class="container">
-        <header>
-            <h1>ALFICAL</h1> 
-            <p style="color: #008000; text-align: center; margin-top: 0;">
-                Clases Particulares a Domicilio
-            </p>
-        </header>
+<div class="container">
+    <header>
+        <h1>ALFICAL</h1>
+        <p style="color:#008000;text-align:center;margin-top:0;">
+            Clases Particulares a Domicilio
+        </p>
+    </header>
 
-        <nav>
-            <a href="index.html">Inicio</a>
-            <a href="materias.html">Materias</a>
-            <a href="profesor.html">Profesor</a>
-        </nav>
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="materias.html">Materias</a>
+        <a href="profesor.html">Profesor</a>
+    </nav>
 
-        <a href="https://wa.me/573024361236?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20clases%20particulares%20de%20matem%C3%A1ticas%20y%20f%C3%ADsica."
-   onclick="gtag('event','conversion',{'send_to':'AW-976611334/MOnuCNyg1LUbEIbQ19ED'});"
-   class="whatsapp-button"
-   target="_blank" rel="noopener noreferrer">
-   📲 WhatsApp: 302 436 1236
-</a>
+    <a href="https://wa.me/573024361236?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20clases%20particulares%20de%20matem%C3%A1ticas%20y%20f%C3%ADsica."
+       onclick="gtag('event','conversion',{'send_to':'AW-976611334/MOnuCNyg1LUbEIbQ19ED'});"
+       class="whatsapp-button"
+       target="_blank" rel="noopener noreferrer">
+       📲 WhatsApp: 302 436 1236
+    </a>
 
-        <div class="content-flex">
-            <div class="flex-item text-item">
-                <p>Aprenda de forma clara, práctica y a su propio nivel. </p>
-<p>
-Explicaciones paso a paso, para todos los niveles: básico, intermedio y universitario.</p>
- <p>
-Clases 100% personalizadas, adaptadas a su proceso de aprendizaje y sus metas académicas.</p>
-            </div>
-            
-            <div class="flex-item image-item">
-                <img src="img/Integral de área definida.jpeg" alt="Integral de área definida">
-            </div>
+    <div class="content-flex">
+        <div class="flex-item text-item">
+            <p>Aprenda de forma clara, práctica y a su propio nivel.</p>
+            <p>Explicaciones paso a paso, para todos los niveles: básico, intermedio y universitario.</p>
+            <p>Clases 100% personalizadas, adaptadas a su proceso de aprendizaje y sus metas académicas.</p>
         </div>
-        <a href="materias.html" class="main-link">Materias</a>
+
+        <div class="flex-item image-item">
+            <img src="img/Integral de área definida.jpeg" alt="Integral de área definida">
+        </div>
     </div>
 
-    <footer>
-        <p>&copy; 2025 ALFICAL. Clases Particulares de Matemáticas y Física.</p>
-        <p>
-            <a href="tel:3024361236">Teléfono: 3024361236</a> | 
-            <a href="https://wa.me/573024361236?" 
-               target="_blank" rel="noopener noreferrer">WhatsApp</a>
-        </p>
-    </footer>
-    
+    <a href="materias.html" class="main-link">Materias</a>
+</div>
+
+<footer>
+    <p>&copy; 2025 ALFICAL. Clases Particulares de Matemáticas y Física.</p>
+    <p>
+        <a href="tel:3024361236">Teléfono: 3024361236</a> |
+        <a href="https://wa.me/573024361236?" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+    </p>
+</footer>
+
 </body>
-    </html>
+</html>
