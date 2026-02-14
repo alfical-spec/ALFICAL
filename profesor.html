@@ -35,24 +35,27 @@
         footer a:hover { text-decoration: underline; }
     </style>
     
-    <!-- ===================== GOOGLE ANALYTICS 4 ===================== -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-C5BY691ZQG"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-      gtag('config', 'G-C5BY691ZQG');
-    </script>
 
-    <!-- ===================== GOOGLE ADS ===================== -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-976611334"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+      // Configuración unificada para GA4 y Google Ads
+      gtag('config', 'G-C5BY691ZQG');
       gtag('config', 'AW-976611334');
+
+      // Función de seguridad para el rastreo de WhatsApp
+      function enviarConversionWhatsApp() {
+        gtag('event', 'conversion', {
+            'send_to': 'AW-976611334/MOnuCNyg1LUbEIbQ19ED',
+            'event_callback': function() {
+                console.log('Conversión registrada desde la página Profesor');
+            }
+        });
+        return true; 
+      }
     </script>
-    
 
 </head>
 
@@ -73,7 +76,7 @@
 </nav>
 
 <a href="https://wa.me/573024361236?"
-   onclick="gtag('event','conversion',{'send_to':'AW-976611334/MOnuCNyg1LUbEIbQ19ED'});"
+   onclick="enviarConversionWhatsApp();"
    class="whatsapp-button"
    target="_blank" rel="noopener noreferrer">
    📲 WhatsApp: 302 436 1236
@@ -102,7 +105,9 @@
     <p>&copy; 2026 ALFICAL. Clases Particulares de Matemáticas y Física.</p>
     <p>
         <a href="tel:3024361236">Teléfono: 3024361236</a> |
-        <a href="https://wa.me/573024361236?" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+        <a href="https://wa.me/573024361236?" 
+           onclick="enviarConversionWhatsApp();"
+           target="_blank" rel="noopener noreferrer">WhatsApp</a>
     </p>
 </footer>
 
