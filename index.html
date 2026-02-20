@@ -34,6 +34,7 @@
         footer a:hover { text-decoration: underline; }
     </style>
 
+    <!-- Google Analytics + Google Ads -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-C5BY691ZQG"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -45,17 +46,14 @@
 
       function enviarConversionWhatsApp() {
 
-        // ✅ Evento para Google Analytics (GA4)
-        gtag('event', 'whatsapp_click', {
-          event_category: 'contacto',
-          event_label: 'boton_whatsapp'
-        });
+        // ✅ Evento para GA4 (VISIBLE en Google Analytics)
+        gtag('event', 'whatsapp_click');
 
         // ✅ Conversión para Google Ads (igual que antes)
         gtag('event', 'conversion', {
           'send_to': 'AW-976611334/MOnuCNyg1LUbEIbQ19ED',
           'event_callback': function() {
-            console.log('Evento de conversión enviado correctamente.');
+            console.log('Conversión enviada correctamente desde Inicio');
           }
         });
 
@@ -79,37 +77,4 @@
         <a href="profesor.html">Profesor</a>
     </nav>
 
-    <a href="https://wa.me/573024361236?"
-       onclick="enviarConversionWhatsApp();"
-       class="whatsapp-button"
-       target="_blank" rel="noopener noreferrer">
-       📲 WhatsApp: 302 436 1236
-    </a>
-
-    <div class="content-flex">
-        <div class="flex-item text-item">
-            <p>Aprenda de forma clara, práctica y a su propio nivel.</p>
-            <p>Explicaciones paso a paso, para todos los niveles: básico, intermedio y universitario.</p>
-            <p>Clases 100% personalizadas, adaptadas a su proceso de aprendizaje y sus metas académicas.</p>
-        </div>
-
-        <div class="flex-item image-item">
-            <img src="img/Integral de área definida.jpeg" alt="Integral de área definida">
-        </div>
-    </div>
-
-    <a href="materias.html" class="main-link">Materias</a>
-</div>
-
-<footer>
-    <p>&copy; 2026 ALFICAL. Clases Particulares de Matemáticas y Física.</p>
-    <p>
-        <a href="tel:3024361236">Teléfono: 3024361236</a> |
-        <a href="https://wa.me/573024361236?" 
-           onclick="enviarConversionWhatsApp();" 
-           target="_blank" rel="noopener noreferrer">WhatsApp</a>
-    </p>
-</footer>
-
-</body>
-</html>
+    <a href="https://wa.me/
