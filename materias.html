@@ -42,18 +42,25 @@
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
 
-      // Configuración unificada GA4 y Google Ads
       gtag('config', 'G-C5BY691ZQG');
       gtag('config', 'AW-976611334');
 
-      // Función para asegurar el envío de la conversión
       function enviarConversionWhatsApp() {
-        gtag('event', 'conversion', {
-            'send_to': 'AW-976611334/MOnuCNyg1LUbEIbQ19ED',
-            'event_callback': function() {
-                console.log('Conversión enviada desde Materias');
-            }
+
+        // ✅ Evento para Google Analytics (GA4)
+        gtag('event', 'whatsapp_click', {
+          event_category: 'contacto',
+          event_label: 'boton_whatsapp'
         });
+
+        // ✅ Conversión para Google Ads (igual que antes)
+        gtag('event', 'conversion', {
+          'send_to': 'AW-976611334/MOnuCNyg1LUbEIbQ19ED',
+          'event_callback': function() {
+            console.log('Conversión enviada desde Materias');
+          }
+        });
+
         return true; 
       }
     </script>
