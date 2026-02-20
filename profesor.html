@@ -41,19 +41,26 @@
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
 
-      // Configuración unificada para GA4 y Google Ads
       gtag('config', 'G-C5BY691ZQG');
       gtag('config', 'AW-976611334');
 
-      // Función de seguridad para el rastreo de WhatsApp
       function enviarConversionWhatsApp() {
-        gtag('event', 'conversion', {
-            'send_to': 'AW-976611334/MOnuCNyg1LUbEIbQ19ED',
-            'event_callback': function() {
-                console.log('Conversión registrada desde la página Profesor');
-            }
+
+        /* 🔹 EVENTO GA4 */
+        gtag('event', 'whatsapp_click', {
+          event_category: 'contacto',
+          event_label: 'WhatsApp Profesor'
         });
-        return true; 
+
+        /* 🔹 CONVERSIÓN GOOGLE ADS */
+        gtag('event', 'conversion', {
+          'send_to': 'AW-976611334/MOnuCNyg1LUbEIbQ19ED',
+          'event_callback': function() {
+            console.log('Conversión registrada desde la página Profesor');
+          }
+        });
+
+        return true;
       }
     </script>
 
