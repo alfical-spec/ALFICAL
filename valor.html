@@ -47,6 +47,20 @@ font-weight:bold
 }
 .whatsapp-button:hover{background:#00a000}
 
+.main-link{
+display:block;
+width:50%;
+margin:30px auto;
+padding:15px;
+background:#008000;
+color:#fff;
+text-align:center;
+text-decoration:none;
+border-radius:5px;
+font-size:1.1em
+}
+.main-link:hover{background:#00a000}
+
 .content-flex{
 display:flex;
 gap:20px;
@@ -87,10 +101,22 @@ padding:20px;
 margin-top:40px;
 background:#333;
 color:#fff;
-font-size:.9em
+font-size:.9em;
+border-radius:0 0 8px 8px
 }
-footer a{color:#00a000;text-decoration:none}
+footer a{
+color:#00a000;
+text-decoration:none;
+margin:0 10px
+}
 footer a:hover{text-decoration:underline}
+
+@media(max-width:600px){
+.container{margin:20px auto;padding:10px}
+.main-link{width:80%}
+.content-flex{flex-direction:column}
+.image-item{width:80%;max-width:100%;margin:0 auto}
+}
 </style>
 
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-C5BY691ZQG"></script>
@@ -132,7 +158,9 @@ return true;
 <a href="https://wa.me/573024361236?"
 onclick="enviarConversionWhatsApp();"
 class="whatsapp-button"
-target="_blank">📲 WhatsApp: 302 436 1236</a>
+target="_blank" rel="noopener noreferrer">
+📲 WhatsApp: 302 436 1236
+</a>
 
 <h2 style="text-align:center;color:#008000">Clases a Domicilio</h2>
 
@@ -147,10 +175,18 @@ target="_blank">📲 WhatsApp: 302 436 1236</a>
 </ul>
 </div>
 
+<a href="index.html" class="main-link">Inicio</a>
+
 </div>
 
 <footer>
-<p>&copy; 2026 ALFICAL</p>
+<p>&copy; 2026 ALFICAL. Clases Particulares de Matemáticas y Física.</p>
+<p>
+<a href="tel:3024361236">Teléfono: 3024361236</a> |
+<a href="https://wa.me/573024361236?"
+onclick="enviarConversionWhatsApp();"
+target="_blank" rel="noopener noreferrer">WhatsApp</a>
+</p>
 </footer>
 
 </body>
