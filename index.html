@@ -63,7 +63,7 @@
             .grid-materias { flex-direction: column; }
         }
         footer { text-align: center; padding: 25px; margin-top: 40px; background-color: #333; color: white; border-radius: 0 0 8px 8px; font-size: 0.95em; }
-        footer a { color: #25D366; text-decoration: none; margin: 0 10px; font-weight: bold; }
+        footer a { color: #25D366; text-decoration: none; margin: 0 10px; font-weight: bold; cursor: pointer; }
         footer a:hover { text-decoration: underline; }
     </style>
 
@@ -80,6 +80,20 @@
         gtag('event', 'whatsapp_click', { 'event_category': 'contacto', 'event_label': 'boton_whatsapp' });
         gtag('event', 'conversion', { 'send_to': 'AW-976611334/MOnuCNyg1LUbEIbQ19ED' });
         return true;
+      }
+
+      function realizarLlamadaDirecta(numero) {
+        // Copia el número al portapapeles como respaldo inmediato
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+            navigator.clipboard.writeText(numero);
+        }
+        // Inicia el proceso de marcado nativo
+        var a = document.createElement('a');
+        a.href = 'tel:' + numero;
+        a.rel = 'noopener';
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
       }
     </script>
 </head>
@@ -140,7 +154,7 @@
 <footer>
     <p>&copy; 2026 ALFICAL. Bogotá, Colombia.</p>
     <p>
-        <a href="tel:+573024361236">Celular: 302 436 1236</a> | 
+        <a onclick="realizarLlamadaDirecta('3024361236'); return false;">Celular: 302 436 1236</a> | 
         <a href="https://wa.me/573024361236?"
            onclick="enviarConversionWhatsApp();"
            target="_blank" rel="noopener noreferrer">WhatsApp</a>
