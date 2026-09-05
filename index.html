@@ -3,14 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ALFICAL - Clases Particulares de Matemáticas y Física en Bogotá</title>
+    <title>ALFICAL - Clases Virtuales de Matemáticas y Física</title>
     <style>
         body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f4f4; color: #333; line-height: 1.6; }
         .container { max-width: 800px; margin: 40px auto; padding: 20px; background-color: white; border-radius: 8px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); }
         header { text-align: center; padding-bottom: 10px; border-bottom: 2px solid #008000; margin-bottom: 25px; }
         h1 { color: #008000; text-transform: uppercase; margin-bottom: 5px; font-size: 2.5em; } 
         .subtitle { color: #008000; text-align: center; margin-top: 0; font-size: 1.3em; font-weight: bold; }
-        .intro-tag { text-align: center; font-size: 1.15em; font-weight: bold; color: #444; background: #e6f2e6; padding: 12px; border-radius: 6px; margin-bottom: 30px; }
+        .intro-tag { text-align: center; font-size: 1.15em; font-weight: bold; color: #444; background: #e6f2e6; padding: 12px; border-radius: 6px; margin-bottom: 25px; }
+
+        /* Precio */
+        .price-box {
+            text-align: center;
+            background-color: #fff8dc;
+            border: 2px solid #008000;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 20px auto 25px;
+            font-size: 1.35em;
+            font-weight: bold;
+        }
+
+        .price-box span {
+            color: #008000;
+            font-size: 1.25em;
+        }
         
         /* Botón de WhatsApp Principal */
         .whatsapp-button { display: block; width: 90%; margin: 20px auto; padding: 18px; background-color: #25D366; color: white; text-align: center; text-decoration: none; border-radius: 50px; font-size: 1.3em; font-weight: bold; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: 0.3s; box-sizing: border-box; }
@@ -29,6 +46,7 @@
             .whatsapp-button { width: 100%; font-size: 1.15em; }
             .grid-materias { flex-direction: column; }
         }
+
         footer { text-align: center; padding: 25px; margin-top: 40px; background-color: #333; color: white; border-radius: 0 0 8px 8px; font-size: 0.95em; }
         footer a { color: #25D366; text-decoration: none; margin: 0 10px; font-weight: bold; }
         footer a:hover { text-decoration: underline; }
@@ -50,30 +68,45 @@
       }
     </script>
 </head>
+
 <body>
 <div class="container">
+
     <header>
         <h1>ALFICAL</h1>
-        <p class="subtitle">Clases Particulares a Domicilio en Bogotá</p>
+        <p class="subtitle">Clases Virtuales de Matemáticas y Física</p>
     </header>
 
-    <!-- Botón de WhatsApp Principal con ajuste de renglón -->
-<a href="https://wa.me/573024361236?"
-   onclick="enviarConversionWhatsApp();"
-   class="whatsapp-button"
-   target="_blank" rel="noopener noreferrer">
-   📲 Contactar por WhatsApp:<br><span style="white-space: nowrap;">302 436 1236</span>
-</a>
+    <!-- Precio -->
+    <div class="price-box">
+        Valor por hora:
+        <span>$22.000</span>
+    </div>
+
+    <!-- Botón de WhatsApp Principal -->
+    <a href="https://wa.me/573024361236?"
+       onclick="enviarConversionWhatsApp();"
+       class="whatsapp-button"
+       target="_blank"
+       rel="noopener noreferrer">
+       📲 Contactar por WhatsApp:<br>
+       <span style="white-space: nowrap;">302 436 1236</span>
+    </a>
     
     <!-- Público Objetivo -->
     <div class="intro-tag">
         Nivelación y refuerzo para estudiantes de bachillerato y primeros semestres de universidad.
+        <br>
+        Clases individuales y personalizadas, completamente virtuales.
     </div>
 
     <!-- Secciones Temáticas -->
-    <h3 style="color:#333; font-size: 1.4em; margin-bottom: 10px; text-align: center;">Materias y Áreas de Enseñanza</h3>
+    <h3 style="color:#333; font-size: 1.4em; margin-bottom: 10px; text-align: center;">
+        Materias y Áreas de Enseñanza
+    </h3>
     
     <div class="grid-materias">
+
         <!-- Bloque Matemáticas -->
         <div class="materia-box">
             <h2>Matemáticas</h2>
@@ -93,6 +126,7 @@
                 <li>Electricidad, Magnetismo y Ondas</li>
             </ul>
         </div>
+
     </div>
     
 </div>
@@ -103,8 +137,10 @@
         <a href="tel:3024361236">Celular: 302 436 1236</a> | 
         <a href="https://wa.me/573024361236?"
            onclick="enviarConversionWhatsApp();"
-           target="_blank" rel="noopener noreferrer">WhatsApp</a>
+           target="_blank"
+           rel="noopener noreferrer">WhatsApp</a>
     </p>
 </footer>
+
 </body>
 </html>
